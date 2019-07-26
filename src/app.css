@@ -17,7 +17,7 @@ body, html {
 }
 
 .section {
-    min-height: 100vh;
+    min-height: calc(100vh - 39px);
     display: flex;
     flex-direction: column;
 }
@@ -26,8 +26,4 @@ body, html {
     margin: auto;
     font-size: 50px;
     text-align: center;
-}
-
-.section__content {
-    margin-top: -39px;
 }

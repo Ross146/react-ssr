@@ -20,17 +20,15 @@ export default function createMiddleware({assets}) {
 
         // let content = renderToString(render());
 
-        console.log('content', content);
-
-        //let context = {};
-        //let content = renderToString(
-        //    <StaticRouter
-        //        location={req.url}
-        //        context={context}
-        //    >
-        //        {render()}
-        //    </StaticRouter>
-        //);
+        let context = {};
+        let content = renderToString(
+           <StaticRouter
+               location={req.url}
+               context={context}
+           >
+               {render()}
+           </StaticRouter>
+        );
 
 
         //let data = await reactRouterLoadData(req.url);
@@ -53,12 +51,12 @@ export default function createMiddleware({assets}) {
         //);
 
 
-        let event = await router.match(req.url);
-        let content = renderToString(
-           <QuantumRouter event={event}>
-               {render()}
-           </QuantumRouter>
-        );
+        // let event = await router.match(req.url);
+        // let content = renderToString(
+        //    <QuantumRouter event={event}>
+        //        {render()}
+        //    </QuantumRouter>
+        // );
 
         return pageTemplate({
             css: assets.main.css,
@@ -84,7 +82,7 @@ export default function createMiddleware({assets}) {
     let appRouter = new Router();
 
     //// Data loading
-    //appRouter.get('/api/react-router-data', async (req, res, next) => {
+    // appRouter.get('/api/react-router-data', async (req, res, next) => {
     //    try {
     //        res.json((await reactRouterLoadData(req.query.url)));
     //    } catch (err) {
@@ -93,7 +91,7 @@ export default function createMiddleware({assets}) {
     //            stack: err.stack
     //        });
     //    }
-    //});
+    // });
 
     //// Data loading
     //appRouter.get('/api/data', async (req, res, next) => {

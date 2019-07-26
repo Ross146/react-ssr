@@ -11,7 +11,7 @@ import './app.css';
 export function render() {
     // return <StaticHelloWorld />
     // return <DynamicCounterExample />
-    //return <ReactRouterExample/>;
+    return <ReactRouterExample/>;
     //return <ReactRouterDataExample />
-    return <QuantumRouterExample/>;
+    // return <QuantumRouterExample/>;
 }
